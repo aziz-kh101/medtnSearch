@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane prefHeight="474.0" prefWidth="894.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="medtn.view.SearchByMedcineController">
+   <children>
+      <GridPane layoutX="14.0" layoutY="45.0" prefHeight="70.0" prefWidth="352.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="adress" GridPane.columnIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="adresse_cabenet" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="phone_fixe_cabenet" GridPane.rowIndex="1" />
+            <TextField fx:id="phone" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button layoutX="733.0" layoutY="434.0" mnemonicParsing="false" onAction="#search" prefHeight="26.0" prefWidth="142.0" text="search" />
+      <GridPane layoutX="523.0" layoutY="45.0" prefHeight="70.0" prefWidth="317.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.80001220703124" minWidth="10.0" prefWidth="107.4000244140625" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.20003662109374" minWidth="10.0" prefWidth="215.5999755859375" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="34.6" minHeight="10.0" prefHeight="34.6" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="34.6" minHeight="10.0" prefHeight="34.6" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TextField fx:id="sepcialite" GridPane.columnIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="specialite" />
+            <TextField fx:id="gouv" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="gouvernorat" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <TableView fx:id="table" layoutX="14.0" layoutY="128.0" prefHeight="298.0" prefWidth="861.0">
+        <columns>
+            <TableColumn fx:id="prenom_col" prefWidth="81.59997177124023" text="prenom" />
+            <TableColumn fx:id="nom_col" prefWidth="85.60000610351562" text="nom" />
+          <TableColumn fx:id="adress_col" prefWidth="149.6000213623047" text="adresse_cabinet" />
+          <TableColumn fx:id="phone_col" prefWidth="109.60003662109375" text="phone 1" />
+            <TableColumn fx:id="phone_2_col" prefWidth="118.4000244140625" text="phone 2" />
+            <TableColumn fx:id="specialite_col" prefWidth="166.4000244140625" text="specialite" />
+            <TableColumn fx:id="gouv_col" prefWidth="143.199951171875" text="gouvernorat" />
+        </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnToPrevious" prefHeight="25.0" prefWidth="100.0" text="return" />
+   </children>
+</Pane>
